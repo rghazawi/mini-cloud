@@ -1,0 +1,14 @@
+  <!-- <input type="file" (change)="uploadImage($event)" accept="image/*" />-->
+   
+   
+   <div class="folder-container">
+		<h3>My Folders:</h3>
+	   <div class="row">
+			<div class="folder_{{folder.name}} col-6 col-lg-3 folder" *ngFor="let folder of folders">
+				<div class="inner-folder rounded" (click)="onSelect(folder)">
+				<div class="folder-icon"><fa name="folder"></fa></div>
+				  <p>{{folder.display_name}}</p>
+				</div>
+		   </div>
+	   </div>
+   </div>

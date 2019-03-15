@@ -1,0 +1,17 @@
+<div class="floder">
+   <div class="folder-container">
+		<div class="folder-header">
+				<h3>{{folderInfo.display_name}}</h3>
+				<app-modal></app-modal>
+		</div>
+	   <div class="row">
+			<div class="folder_{{folder.name}} col-6 col-lg-3 folder" *ngFor="let folder of apiService.selectedfolderChild">
+				<div class="inner-folder rounded">
+				<button type="button" (click)="deletefolder(folder.id)" pButton icon="pi pi-info-circle" class="delete-folder"><fa name="times"></fa></button>
+				<div class="folder-icon"><fa name="folder"></fa></div>
+				  <p>{{folder.name}}</p>
+				</div>
+		   </div>
+	   </div>
+   </div>
+</div>

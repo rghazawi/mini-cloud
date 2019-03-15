@@ -1,0 +1,12 @@
+
+<p-dialog header="Add Folder Name" [(visible)]="display" [modal]="true" [responsive]="true" [style]="{width: '350px', minWidth: '200px'}" [minY]="70" 
+        [maximizable]="true" [baseZIndex]="10000">
+		<div class="form-group">
+			<label for="foldername">Folder Name</label>
+			<input #folderName type="text" id="foldername" class="form-control" />
+		</div>
+        <p-footer>
+            <button type="button" pButton icon="pi pi-check" (click)="getFolderName(folderName.value)" label="Yes">Add</button>
+        </p-footer>
+</p-dialog>
+	<button type="button" (click)="showDialog()" pButton icon="pi pi-info-circle" label="Show" class="add-new-folder"><fa name="plus"></fa></button>
